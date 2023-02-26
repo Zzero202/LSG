@@ -32,6 +32,7 @@ class PatientController extends Controller
     {
         $patient = Patient::find(request()->patient_id);
         $patient->doctors()->attach(request()->doctor_id);
+        dd(request());
         $patient->doctors()->save($patient, ['appointment' => request()->appointment]);
         return $patient;
     }

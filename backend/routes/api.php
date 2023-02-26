@@ -27,4 +27,4 @@ Route::post("/login", [PatientController::class, 'login']);
 Route::get("/doctors", [DoctorController::class, 'getDoctors']);
 Route::post("/addDoctors", [DoctorController::class, 'addDoctors']);
 Route::get('/profiles/{profile}', [ProfileController::class, 'getProfile']);
-Route::post('/reserves', [PatientController::class, 'Reserve']);
+Route::get('/reserves', [PatientController::class, 'Reserve']);
