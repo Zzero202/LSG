@@ -1,0 +1,20 @@
+<a routerLink="/profiles/{{ id }}"
+  ><h1 style="margin-left: 50px; text-transform: capitalize">
+    {{ getName }}
+  </h1></a
+>
+<div class="doc">
+  <div *ngFor="let doc of doctors">
+    <img
+      width="200"
+      src="https://img.freepik.com/free-photo/beautiful-young-female-doctor-looking-camera-office_1301-7807.jpg?w=2000"
+      alt=""
+    />
+    <h2>{{ doc.name }}</h2>
+    <form [formGroup]="reserveForm" (ngSubmit)="reserve(doc.id)">
+      <input type="datetime-local" formControlName="appointment" />
+      <input type="hidden" formControlName="patient_id" />
+      <button>appoint here</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+<form [formGroup]="addDoctorsForm" (ngSubmit)="addDoc()">
+  <div class="text-center">
+    <label for="exampleInputEmail1" class="form-label" style="color: #f68b1e"
+      >Name</label
+    >
+    <input
+      formControlName="name"
+      type="text"
+      class="form-control"
+      aria-describedby="emailHelp"
+    />
+  </div>
+
+  <div class="text-center">
+    <label for="exampleInputEmail1" class="form-label" style="color: #f68b1e"
+      >Email address</label
+    >
+    <input
+      formControlName="email"
+      type="email"
+      class="form-control"
+      aria-describedby="emailHelp"
+    />
+  </div>
+
+  <div class="text-center mb-4 position-relative">
+    <label for="exampleInputPassword1" class="form-label" style="color: #f68b1e"
+      >Password</label
+    >
+    <input
+      formControlName="password"
+      type="password"
+      class="form-control"
+      id="exampleInputPassword1"
+    />
+  </div>
+  <div class="text-center">
+    <input
+      formControlName="type"
+      readonly
+      type="hidden"
+      class="form-control"
+      aria-describedby="emailHelp"
+    />
+  </div>
+  <button type="submit" class="btn btn-danger">Add</button>
+</form>

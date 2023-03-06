@@ -1,0 +1,11 @@
+.doc{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.doc div {
+  margin-bottom:50px;
+  text-align: center;
+}
